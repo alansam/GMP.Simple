@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5AD8143F23DED19B00F4D012 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD8143E23DED19B00F4D012 /* main.c */; };
+		5AD8143F23DED19B00F4D012 /* gmp-simple.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD8143E23DED19B00F4D012 /* gmp-simple.c */; };
+		5AD8145D23E1573300F4D012 /* gmp-simple-main.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD8145C23E1573300F4D012 /* gmp-simple-main.c */; };
+		5AD8146123E15E9600F4D012 /* gmp-rationals.c in Sources */ = {isa = PBXBuildFile; fileRef = 5AD8146023E15E9600F4D012 /* gmp-rationals.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +26,13 @@
 
 /* Begin PBXFileReference section */
 		5AD8143B23DED19B00F4D012 /* GMP.Simple */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GMP.Simple; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AD8143E23DED19B00F4D012 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		5AD8143E23DED19B00F4D012 /* gmp-simple.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "gmp-simple.c"; sourceTree = "<group>"; };
+		5AD8144523DFF85000F4D012 /* GMP.Simple.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GMP.Simple.entitlements; sourceTree = "<group>"; };
+		5AD8145B23E156B900F4D012 /* version_info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = version_info.h; sourceTree = "<group>"; };
+		5AD8145C23E1573300F4D012 /* gmp-simple-main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "gmp-simple-main.c"; sourceTree = "<group>"; };
+		5AD8145E23E1580B00F4D012 /* gmp-simple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "gmp-simple.h"; sourceTree = "<group>"; };
+		5AD8145F23E15E9600F4D012 /* gmp-rationals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "gmp-rationals.h"; sourceTree = "<group>"; };
+		5AD8146023E15E9600F4D012 /* gmp-rationals.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "gmp-rationals.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +65,13 @@
 		5AD8143D23DED19B00F4D012 /* GMP.Simple */ = {
 			isa = PBXGroup;
 			children = (
-				5AD8143E23DED19B00F4D012 /* main.c */,
+				5AD8145C23E1573300F4D012 /* gmp-simple-main.c */,
+				5AD8143E23DED19B00F4D012 /* gmp-simple.c */,
+				5AD8145E23E1580B00F4D012 /* gmp-simple.h */,
+				5AD8146023E15E9600F4D012 /* gmp-rationals.c */,
+				5AD8145F23E15E9600F4D012 /* gmp-rationals.h */,
+				5AD8145B23E156B900F4D012 /* version_info.h */,
+				5AD8144523DFF85000F4D012 /* GMP.Simple.entitlements */,
 			);
 			path = GMP.Simple;
 			sourceTree = "<group>";
@@ -119,7 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AD8143F23DED19B00F4D012 /* main.c in Sources */,
+				5AD8143F23DED19B00F4D012 /* gmp-simple.c in Sources */,
+				5AD8146123E15E9600F4D012 /* gmp-rationals.c in Sources */,
+				5AD8145D23E1573300F4D012 /* gmp-simple-main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +148,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -162,7 +178,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -190,7 +206,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -220,7 +236,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -238,9 +254,14 @@
 		5AD8144323DED19B00F4D012 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GMP.Simple/GMP.Simple.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HD3NHZ5324;
 				ENABLE_HARDENED_RUNTIME = YES;
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = NO_INTERACTIVE;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = /usr/local/lib;
+				"OTHER_LDFLAGS[arch=*]" = "-lgmp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +269,7 @@
 		5AD8144423DED19B00F4D012 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GMP.Simple/GMP.Simple.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HD3NHZ5324;
 				ENABLE_HARDENED_RUNTIME = YES;
